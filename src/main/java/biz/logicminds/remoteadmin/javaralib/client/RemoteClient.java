@@ -10,14 +10,14 @@ import org.springframework.http.MediaType;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 import org.springframework.web.client.RestTemplate;
 
-public abstract class abstractRemoteClient implements remoteClientInterface {
+public class RemoteClient implements remoteClientInterface {
 
 	protected RestTemplate rest = null;
 	private HttpHeaders headers = null;
 	private String baseurl;
 	private boolean isSecure = false;
 	
-	public abstractRemoteClient(String url) {
+	public RemoteClient(String url) {
 		isSecure = url.startsWith("https");
 		rest = createClient();
 		headers = getHeaders();
@@ -75,7 +75,7 @@ public abstract class abstractRemoteClient implements remoteClientInterface {
 		getHeaders().setAcceptEncoding(type);
 	}
 	
-	public void initHeaders() {
+	private void initHeaders() {
 		try {
 			setAcceptHeader("application/json");
 		} catch (RemoteClientException e) {
@@ -85,7 +85,21 @@ public abstract class abstractRemoteClient implements remoteClientInterface {
 				
 	}
 	
-	abstract public String getFacts(String node);
+	public String getFacts(String node){
+		return null;
+	}
+
+	@Override
+	public String getNodes() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getGroups() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 		
 	
 

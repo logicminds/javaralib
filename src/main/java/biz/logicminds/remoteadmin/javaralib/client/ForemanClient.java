@@ -1,6 +1,6 @@
 package biz.logicminds.remoteadmin.javaralib.client;
 
-public class ForemanClient extends abstractRemoteClient implements remoteClientInterface {
+public class ForemanClient extends RemoteClient implements remoteClientInterface {
 
 	public ForemanClient(String url) {
 		super(url);
