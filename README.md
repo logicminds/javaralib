@@ -66,6 +66,7 @@ Once you have followed this process once, it becomes much simpler to add future 
 Merge upstream develop to local develop
 ========================================
 In order to get the latest upstream code use the following workflow.
+
 1. git fetch upstream
 2. git checkout develop
 3. git rebase upstream/develop develop
