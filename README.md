@@ -18,8 +18,8 @@ Requirements for Development
 -----------------------------
 1. STS 3.1 Release or Eclipse 4.1.2+
 2. spring-android (included in POM file)
-3. maven android plugin
-4. m2e android connector
+3. maven android plugin (http://code.google.com/p/maven-android-plugin/)
+4. m2e android connector (http://rgladwell.github.com/m2e-android/)
 5. android development tools (SDK)
 6. A github account
 
